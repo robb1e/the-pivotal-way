@@ -1,0 +1,16 @@
+hgroup h1 {
+  padding: 6px 18px 4px 0;
+  background: #0077C0;
+  padding: 6px 20px;
+}
+
+hgroup h2 {
+  background: #7EABDA;
+  letter-spacing: -0.05em;
+  padding: 6px 18px 4px 15px;
+}
+
+code {
+  color: #63FF00;
+  background: black;
+}

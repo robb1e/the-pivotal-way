@@ -1,0 +1,40 @@
+body {
+  font-family: "Merriweather", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+h1, h2 {
+  line-height: 1.2em;
+  margin: 0 0 5px;
+}
+
+hgroup h1, hgroup h2 {
+  color: white;
+  display: table;
+}
+
+hgroup h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+hgroup h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+article {
+  border-bottom: 3px solid #ccc;
+  margin: 20px 0;
+}
+
+p.byline {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+}
+
+code {
+  display:block;
+}
+

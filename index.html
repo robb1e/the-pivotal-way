@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="all.css" media="all" type="text/css">
+    <link rel="stylesheet" href="screen.css" media="screen" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Merriweather:300" rel="stylesheet" type="text/css">
+    <title>The Pivotal Way</title>
+  </head>
+  <body>
+    <hgroup>
+      <h1>The Pivotal Way</h1>
+      <h2>A collection of blogs from Pivots, past and present</h2>
+    </hgroup>
+    <article>
+      <header>
+        <p class="dateline">March, 2007</p>
+        <h1>A different take on startup incubation</h1>
+        <p class="standfirst">On a new way of working with startups.</p>
+      </header>
+      <p class="byline">Ian McFarland</p>
+      <p>About a year and a half ago, Pivotal Labs started a new practice, focused on product-led startups. It's not the traditional VC/EIR model though. With Pivotal, our clients are the ones with the product vision. They're the entrepreneurs. We focus on bootstrapping development, and getting the engineering effort going. We're just here to make sure the technology works, and that engineering execution doesn't get in the way.</p>
+      <p>When we take on a project, we like to hit the ground running. We seed the project with an experienced team, ready to begin executing immediately on the client's product vision. As the vision grows and changes, our team adapts. Usually the client will start hiring their development team as development continues. Often, we'll help them recruit and interview. Then we'll weave their new folks into the team, teaching them the code base, and all our techniques as well. We want to make sure that when we're done with the project, their team can move into the next phase of development with confidence, and keep things running smoothly.</p>
+      <p>When our clients already have an established development team, we weave our developers in with theirs, and co-develop with them. If they're new to agile, we teach them agile practices by doing, as we write code with them. Rather than dropping in with a day-long lecture based on toy problems, and then vanishing into the sunset, we show them how agile works, in their own development environment. We fill in any gaps in their design, modeling and testing skills, and generally improve development practices as we go. Once they're self-sufficient, we weave our developers back out, and move on to the next engagement.</p>
+      <p>Rob Mee, our founder and CEO, likes to borrow a phrase from the civil engineering world to describe how we engage with start-ups: Build-Operate-Transfer. When an enterprise is first getting started, they typically don't have the engineering resources to get going quickly, and can lose months of lead-time trying to build a team. That's where we come in: Our job is to take our clients from a standing start to a fully functional product, something we can typically do in a few months. Once things are up and running, we're ready to turn over the reins, and let their team run things for themselves.</p>
+      <p>One thing that's special about us is that we can vary the team size on demand. During the early stages of development, start-ups will often have big fluctuations in workload. We can ramp the team size up or down, depending on development objectives and financing constraints. We can develop at full speed for a week, a month, or a year, then stop on a dime—and stop burning capital—and stop for as long as it takes for the client to close a funding round, or get some traction in the marketplace, or decide on the next round of features. Our clients are done with us when they decide they're done. Their business goals and product needs are always in the driver's seat.</p>
+      <p>We strive to be a strategic partner for our clients. We are not an outsourcing firm but instead work to get our clients self-sufficient. We believe our approach offers a unique balance between the short term need for execution and the long term need of sustainability.</p>
+    </article>
+    <article>
+      <header>
+        <p class='dateline'>March, 2011</p>
+        <h1>DRY design documentation</h1>
+        <p class='standfirst'>On a developer friendly way to document design.</p>
+      </header>
+      <p class='byline'>Ian McFarland</p>
+      <p>I believe it was in a conversation with Janice Fraser that I first started talking about DRY Documentation. It was certainly she (among others) who goaded me into actually writing this blog post. So I'm taking a moment on my WiFi-free (and generally amenity-free) United Airlines flight to SXSW to put pixel to screen.</p>
+      <p>DRYness is an age-old concept in the Agile space (to the extent that that's possible in a space that's only 10 years old itself) and it's elegant in its simplicity. DRY simply stands for Don't Repeat Yourself. The idea is that you should only do any one thing in code in only one place. If, for example, you are doing an interest rate calculation, don't copy and paste the code from one place where you need it to another: instead, move that responsibility to an object that reasonably should be responsible for such things, and do that interest rate calculation only in that one place. The reasons for this being important are manifold, but perhaps the canonical reason is so that it's easy to change: When the interest rate calculation changes, you don't have to go digging through your code to find all the places you do it, and make sure you change them all consistently. Instead, you change the code in only one place.</p>
+      <p>Hopefully this is old hat for most coders now, and hopefully you, gentle reader, will forgive me my oversimplifcations and conflations. The point is one of simplicity.</p>
+      <p>So now, let's shift focus to design documentation. The idea I'm trying to express when I talk about DRY documentation is one again of simplicity, though the drivers are perhaps a little different.</p>
+      <p>The mental model for truly DRY documentation is one in which every pixel on the page tells you something you didn't know before. Of course, like DRY code, it's worth being pragmatic. There are times when greater clarity can be gained by a certain amount of contextual restatement. But as a theoretical goal state, it's still quite useful to picture a body of documentation in which every last line tells you something you needed to know about what you're trying to build, and something you didn't know from looking at any other line in the documentation.</p>
+      <p>What would we notice about a set of documentation that adhered to these principles? Well, first, and most obviously, it would probably be a lot shorter than the documentation we're used to seeing. And that in itself is a benefit. Why? For a number of reasons. First, shorter documentation is in general easier to digest, and it's generally easier to find the relevant bit of documentation in a shorter corpus, all else being equal. (And of course, document structure and readability play just as big a role in a short document as they do in a longer one.)</p>
+      <p>Shorter documents are also easier to revise and maintain. And it's easier to find changes between versions, all else being equal. I talk sometimes about the 500 page PRD we got when we were developing one product, complete with two sets of revisions, also 500 pages each. Guess how easy it was for the developer to find the 2% of information that changed in each revision, and understand its implications to for the site? Guess how easy it was for the designer to be sure she'd changed everything consistently? In a DRY design doc, changes are more obvious, and more meaningful. Things jump out when they're inconsistent. And they tend to be more consistent, because the designs implied are applied more consistently across the product in question.</p>
+      <p>This brings me to another favorite topic: Principled design. DRY documentation is a lot easier to develop (and it's a lot easier to tell when your documentation is DRY) when your design is motivated by specific principles. For instance, when you decide, in the banking app you're designing, that all checking account features will use Cerulean Blue for their accent color, and all savings account features will use Prussian Blue, a lot of nice things happen. First, design questions become much easier to answer. The new Maximizer Account we've just added is a kind of savings account. Great! We know it's going to be Prussian Blue. (Or we can make a better informed decision that there should be a new point in the color family.) Second, it suddenly becomes a lot easier to document this fact. A one page style bible can capture this information, and when some new feature is implemented, it doesn't take any intervention from the VxD to make sure the new bits have the right color choices. Third, when some new feature comes along, developers roughing it out can come up with a reasonable early approximation of what it should look like, because they have principles to apply, instead of PSDs to pore over, looking for a non-existent visual treatment for the new thing they're just embarking on. This lets said VxD (and the IA) spend time tuning something that's close, rather than restating the design principles they've got in their heads, in the form of some new PSD file.</p>
+      <p>A fourth virtue is that suddenly all these color choices (or typography choices, or IxD choices,) have consistency, a consistency that our dear End User can actually pick up on. They don't end up feeling lost in a jumble of pretty colors, but start to associate the Prussian Blue with savings accounts, the Cerulean Blue with checking accounts, and, assuming the designer goes in this direction, that blue in general means cash accounts; green, stock and security accounts; reds and oranges, loans and credit accounts, or similar.</p>
+      <p>They may not be able to articulate why they know this, but they will perceive a solidity and purpose in the VxD, one that makes them feel safe and comfortable, and one that helps them use the application more effectively.</p>
+      <p>When coupled with a good domain model and a good information architecture, it suddenly gets a lot easier for the whole team to keep the design princples top of mind, and answer basic questions without having to consult a 500 page document, or even a 20-30 page set of wireframes and interaction designs. Hopefully they can answer most questions from a one or two page style bible, and by consulting the wireframe describing their grid system, and the one for the kind of module they're working on.</p>
+      <p>Again, the point is not to pursue this ideal to an absurdist end, but rather to continually ask oneself: Could this documentation be simpler? Did I cover this already? Could an existing design concept apply to the new area I'm covering? Restatement in the service of clarity is always to be lauded. Unfortunately, in practice, most restatement in the form of long design documents is just waste: Waste in that the documentation must be produced; that it must be maintained; that it must be read; that it must be understood; and waste in that it tends to obscure the princples of the design in favor of the surface of the design.</p>
+      <p>And of course, another agile principle comes into play: Refactoring. Often a second use of a given design treatment exposes new boundary cases and new pressures on the design, and the initial design needs to be modified slightly to accommodate both the new and the old use case. This is usually a simplfying force, and one not to be resisted. Let the documentation live, and reflect the deeper underlying principles of the design you're trying to express. Applied well, this rigor will help you to simplify and clarify your designs, and expose their essence.</p>
+      <p>When practiced well, DRY documentation will set you free, give you control and clarity, and communicate your design vision efficiently and clearly. It will also free your development team to do things more or less right the first time, and give them more time to work on the bits that need more love and attention.</p>
+    </article>
+    <article>
+      <header>
+        <p class='dateline'>October, 2012</p>
+        <h1>How to write well formed stories</h1>
+        <p class='standfirst'>How can we write a story so everyone knows what the expectations are before we begin?</p>
+      </header>
+      <p class='byline'>Jonathan Berger</p>
+      <p>I've worked closely with the Product team on about a dozen projects in the past few years, and rigorous story-writing is one of the most common areas for low-cost, high-gain improvement. I encourage every team to adopt (or at least consider) these techniques.
+      <p>Write every story in Gherkin. I don't care whether or not you use cucumber: use Gherkin. Which is to say, every story should be in "Given / When / Then" form. This is the cheapest and easiest way to apply Convention Over Configuration to your user stories, and can have a HUGE benefit for your team.
+      <pre>
+      <code>
+        Scenario: User adds item to cart
+          Given I'm a logged-in User
+          When I go to the Item page
+          And I click "Add item to cart"
+          Then the quantity of items in my cart should go up
+          And my subtotal should increment
+          And the warehouse inventory should decrement
+      </code>
+      </pre>
+      <p>Every feature story must include an "As a / I want to / Because..." block, which illustrates the motivation behind a story. Compelling the product team to specify the motivation behind a story help illuminate what exactly the requirement is, as well as providing guidance to the developers. Some people prefer "So That..." instead of "Because", but in most cases "Because" helps drive out motivation the Final Cause whereas "So that" may only drive out the Effective Cause, which is less useful for understanding the story. (Thanks to Sam Coward for this insight.)
+      <pre><code>
+        Feature: Shopping Cart
+          As a Shopper
+          I want to put items in my shopping cart
+          Because I want to manage items before I check out
+      </code></pre>
+      <p>Every story title must include the word "should". NEVER use the word "can", which camouflages desired behavior. E.g. It's unclear whether the story "User can delete comment" is a feature or a bug. "User should be able to delete comment" or "User should not be able to delete comment" are much clearer: the former is a feature, the latter a bug. Don't make me guess.
+      <p>When a story feels a little fishy, check that these bases are covered. If any are missing, fix then before you do anything else. The answer will often be driven out in the process of working the story into Well Formed shape.
+      <p>Well Formed stories truly drive out the feature from the user's perspective; this catches 80% of weird edge cases while the whole team is together, in context, and in planning mode, instead of having to interrupt-drive the PM. Well Formed stories make it impossible to camouflage large stories as small stories by elision. Because the story has to be written out step-by-step, all the complexity might otherwise be hidden is forced out into the open. And when you find yourself with conditionals or switches? That's a new scenario! Now all stories are forced into roughly the same size. Another side-effect is that once one story ~= one scenario, the amount of work to be done can be roughly gauged spatially, by looking at how much of your wall is covered by index cards. For bonus points, use the story title as your git commit, e.g. the story "User should be able to recommend a product" becomes the git commit "User is able to recommend a product", and your git log tells the narrative of your project.
+      <p>Once apon a time, J (the anchor) made N (a very bright, technical Product Manager) write stories in Gherkin. Most stories weren't 100% ready to be pasted into cucumber, but it usually didn't take too much work to get them there. The team would discuss in IPM, and then devs could copy-and-paste stories right into Cucumber. This doesn't work for every PM, but even in the worst case, teams with less than tech-savvy PMs see real benefits from writing their stories at the right level of granularity. Once I was exposed to a team where we wrote Gherkin all the time, anything else felt like broken process.
+      <aside>UPDATE: To be clear, the opinions in this article are my own, and do not reflect anything close to consensus or standard practice on the part of Pivotal. Some Pivots will agree with this position, while many others will not.</aside>
+    </article>
+    <article>
+      <header>
+        <p class='dateline'>August, 2012</p>
+        <h1>Velocity matters</h1>
+        <p class='standfirst'>Why velocity matters and what it tells us</p>
+      </header>
+      <p class='byline'>Dan Podsedly</p>
+      <p>Last week, we made a slight tweak to how velocity is calculated in Pivotal Tracker, to handle team strength overrides in a simpler, more explainable way. As a result, if your project has an adjusted team strength in a recent iteration, you may be seeing a slightly different velocity.</p>
+      <p>Details of how velocity is calculated, and how team strength affects it, are at the end of this post.</p>
+      <p>This seems like a good opportunity, though, to step back a bit, and revisit the velocity concept in Tracker and why it (still) matters. Read on, even if you're an old hat to agile and Tracker!</p>
+      <p>First, let's re-define what velocity is. Christian Niles, our iOS engineer, recently gave it an eloquent description (inspired by his recent relaxed strolls through the streets of Paris):</p>
+      <p>"Just like a speedometer that measures how fast you're hurtling through space, Tracker's velocity is a measurement of how fast your team completes stories. Instead of miles or kilometers per hour, Tracker expresses velocity as the number of points completed per iteration.</p>
+      <p>Because Tracker stories are assigned point values instead of due dates, Tracker calculates velocity by averaging the number of points you've completed over the past few iterations. In Tracker, past predicts future."</p>
+      <p>Yes, velocity does give you a glimpse into the future, in the form of more realistic estimates of when milestones will be hit, at least compared to wishful due dates. It's obviously just an approximation, though, and the velocity number itself is ultimately not very meaningful outside the context of a given project.</p>
+      <p>What's really valuable are the conversations that story estimation encourages within development teams (and their product owners). Conversations that uncover all kinds of assumptions and hidden scope, and give the product owner the insight to make value decisions at every step (is that 5 point feature really worth it, is there a simpler alternative?), which all leads to leaner, better product, and a more direct path to the finish line.</p>
+      <p>Having a crisp, prioritized backlog of estimated stories, and a steady velocity, lets you have really constructive conversations with your stakeholders when facing that inevitable change to requirements. Dragging those new stories into the backlog gives you immediate feedback about how the scope increase will affect the future timeline and planned releases, and allows you to make tradeoff decisions ("ok, let's move these other stories down so we can still make that milestone").</p>
+      <p>These conversations are where all the important tactical decisions are made, and there will be many, as you keep learning as a team, and the world keeps changing on you. Each one takes you closer and closer to winning the battle (and shipping great software).</p>
+      <p>Steady state allows you to predict, at least roughly, when your project will hit important milestones. This gives your business the ability to plan ahead and to make meaningful tradeoff decisions (usually scope vs time), as you discover more scope (and you always do). Predictability is rare in the software industry, and only comes when you get your project to that zen-like state of steady, consistent pace, measured by low volatility (of velocity).</p>
+      <p>Achieving low volatility takes an ongoing effort, but the practices that collectively yield it are worth the effort on their own merit. Break down large features into small stories (that fit into a single iteration), estimate as a team, maintain a constant ratio of features to bugs and chores every iteration, deliver stories continuously, and have your product owner highly involved, available, and accepting those stories daily.</p>
+      <p>Unless you've got a team of cyborgs, or perfected cloning technology, chances are there will be weeks when a big subset of the team is sick (yes, that achilles heel of pair programming), on vacation, at a conference, or it's just the usual between the holidays lull with a skeleton crew.</p>
+      <p>The team strength feature allows you to plan for that (or account for it retroactively), in terms of velocity. For example, if half of your team leaves for a conference one iteration, you might set your the team strength of that iteration to 50%. Likewise, if your team works all weekend to prepare for launching your product, you would set the team strength to 140% (since they worked 7 days instead of a normal 5 day work week).</p>
+      <p>Check out a short video on team strength here.</p>
+      <p>You can also adjust the length of a single iteration, for situations such as the big end of year holidays. Or you can use it to effectively put your project on hold, by combining iteration length override with a team strength of 0%.</p>
+      <p>How velocity is calculated is fairly straightforward, it's the sum of all 'normalized' points completed over a given set of iterations (based on project settings), divided by the combined length of all those iterations, in weeks. 'Normalized' points are the number of points the team would have completed in an iteration at 100% team strength.</p>
+      <pre><code>
+      velocity_per_week(iteration_1, ..., iteration_N) =
+        SUM(iteration_i.points / iteration.team_strength) /
+        SUM(iteration.length_in_weeks)
+      </code></pre>
+      <p>Iterations with a team strength of 0 are excluded from both sums.</p>
+      <p>The formula above always returns velocity per week. The project velocity Tracker displays is always multiplied by the default iteration length, and rounded down to the nearest integer. For example, if your iterations are 2-weeks long by default, Tracker will multiply the per-week velocity by 2.</p>
+      <p>We've got quite lot of detailed information about velocity and related topics in the Tracker FAQ, as well as the Getting Started guide. In particular, take a few minutes to watch the Introduction to the Concepts video.</p>
+    </article>
+  </body>
+</html>
