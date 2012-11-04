@@ -67,3 +67,10 @@ nav li span {
   float: right;
 }
 
+#intro {
+  margin-top: 100px;
+}
+
+.signoff:before {
+  content: ' - ';
+}
