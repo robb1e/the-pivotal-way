@@ -13,11 +13,6 @@ h1, h2 {
   margin: 0 0 5px;
 }
 
-hgroup h1, hgroup h2 {
-  color: white;
-  display: table;
-}
-
 hgroup h1 {
   font-size: 26px;
   text-transform: uppercase;
@@ -37,6 +32,10 @@ p.byline {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 6px 0;
+}
+
+p.dateline {
+  font-size: 12px;
 }
 
 code {

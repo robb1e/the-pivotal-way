@@ -1,10 +1,15 @@
-hgroup h1 {
+hgroup h1, hgroup h2, article header h1, article header p.standfirst {
+  color: white;
+  display: table;
+}
+
+hgroup h1, article header h1 {
   padding: 6px 18px 4px 0;
   background: #0077C0;
   padding: 6px 20px;
 }
 
-hgroup h2 {
+hgroup h2, article header p.standfirst {
   background: #7EABDA;
   letter-spacing: -0.05em;
   padding: 6px 18px 4px 15px;
