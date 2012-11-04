@@ -57,24 +57,18 @@
       <p class='byline'>Jonathan Berger</p>
       <p>I've worked closely with the Product team on about a dozen projects in the past few years, and rigorous story-writing is one of the most common areas for low-cost, high-gain improvement. I encourage every team to adopt (or at least consider) these techniques.
       <p>Write every story in Gherkin. I don't care whether or not you use cucumber: use Gherkin. Which is to say, every story should be in "Given / When / Then" form. This is the cheapest and easiest way to apply Convention Over Configuration to your user stories, and can have a HUGE benefit for your team.
-      <pre>
-      <code>
-        Scenario: User adds item to cart
-          Given I'm a logged-in User
-          When I go to the Item page
-          And I click "Add item to cart"
-          Then the quantity of items in my cart should go up
-          And my subtotal should increment
-          And the warehouse inventory should decrement
-      </code>
-      </pre>
+<pre><code>Scenario: User adds item to cart
+  Given I'm a logged-in User
+  When I go to the Item page
+  And I click "Add item to cart"
+  Then the quantity of items in my cart should go up
+  And my subtotal should increment
+  And the warehouse inventory should decrement</code></pre>
       <p>Every feature story must include an "As a / I want to / Because..." block, which illustrates the motivation behind a story. Compelling the product team to specify the motivation behind a story help illuminate what exactly the requirement is, as well as providing guidance to the developers. Some people prefer "So That..." instead of "Because", but in most cases "Because" helps drive out motivation the Final Cause whereas "So that" may only drive out the Effective Cause, which is less useful for understanding the story. (Thanks to Sam Coward for this insight.)
-      <pre><code>
-        Feature: Shopping Cart
-          As a Shopper
-          I want to put items in my shopping cart
-          Because I want to manage items before I check out
-      </code></pre>
+<pre><code>Feature: Shopping Cart
+  As a Shopper
+  I want to put items in my shopping cart
+  Because I want to manage items before I check out</code></pre>
       <p>Every story title must include the word "should". NEVER use the word "can", which camouflages desired behavior. E.g. It's unclear whether the story "User can delete comment" is a feature or a bug. "User should be able to delete comment" or "User should not be able to delete comment" are much clearer: the former is a feature, the latter a bug. Don't make me guess.
       <p>When a story feels a little fishy, check that these bases are covered. If any are missing, fix then before you do anything else. The answer will often be driven out in the process of working the story into Well Formed shape.
       <p>Well Formed stories truly drive out the feature from the user's perspective; this catches 80% of weird edge cases while the whole team is together, in context, and in planning mode, instead of having to interrupt-drive the PM. Well Formed stories make it impossible to camouflage large stories as small stories by elision. Because the story has to be written out step-by-step, all the complexity might otherwise be hidden is forced out into the open. And when you find yourself with conditionals or switches? That's a new scenario! Now all stories are forced into roughly the same size. Another side-effect is that once one story ~= one scenario, the amount of work to be done can be roughly gauged spatially, by looking at how much of your wall is covered by index cards. For bonus points, use the story title as your git commit, e.g. the story "User should be able to recommend a product" becomes the git commit "User is able to recommend a product", and your git log tells the narrative of your project.
@@ -105,11 +99,9 @@
       <p>Check out a short video on team strength here.</p>
       <p>You can also adjust the length of a single iteration, for situations such as the big end of year holidays. Or you can use it to effectively put your project on hold, by combining iteration length override with a team strength of 0%.</p>
       <p>How velocity is calculated is fairly straightforward, it's the sum of all 'normalized' points completed over a given set of iterations (based on project settings), divided by the combined length of all those iterations, in weeks. 'Normalized' points are the number of points the team would have completed in an iteration at 100% team strength.</p>
-      <pre><code>
-      velocity_per_week(iteration_1, ..., iteration_N) =
-        SUM(iteration_i.points / iteration.team_strength) /
-        SUM(iteration.length_in_weeks)
-      </code></pre>
+<pre><code>velocity_per_week(iteration_1, ..., iteration_N) =
+  SUM(iteration_i.points / iteration.team_strength) /
+  SUM(iteration.length_in_weeks)</code></pre>
       <p>Iterations with a team strength of 0 are excluded from both sums.</p>
       <p>The formula above always returns velocity per week. The project velocity Tracker displays is always multiplied by the default iteration length, and rounded down to the nearest integer. For example, if your iterations are 2-weeks long by default, Tracker will multiply the per-week velocity by 2.</p>
       <p>We've got quite lot of detailed information about velocity and related topics in the Tracker FAQ, as well as the Getting Started guide. In particular, take a few minutes to watch the Introduction to the Concepts video.</p>
