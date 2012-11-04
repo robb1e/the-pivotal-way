@@ -12,7 +12,18 @@
       <h1>The Pivotal Way</h1>
       <h2>A collection of blogs from Pivots, past and present</h2>
     </hgroup>
-    <article>
+    <nav>
+      <ol>
+        <li><a href="#incubation">A different take on startup incubation<span>Ian McFarland</span></a></li>
+        <li><a href="#stylebible">Virtues of a style bible<span>Ian McFarland</span></a></li>
+        <li><a href='#wellformedstories'>How to write well formed stories<span>Jonathan Berger</span></a></li>
+        <li><a href='#velocitymatters'>Velocity matters<span>Dan Podsedly</span></a></li>
+        <li><a href='#loveci'>Stop worrying and learn to love continuous integration<span>Chad Woolley</span></a></li>
+        <li><a href='#testingstrategies'>Testing strategies<span>Robbie Clutton</span></a></li>
+        <li><a href='#buildingconfidence'>Building confidence<span>Robbie Clutton</span></a></li>
+      </ol>
+    </nav>
+    <article id="incubation">
       <header>
         <p class="dateline">March, 2007</p>
         <h1>A different take on startup incubation</h1>
@@ -26,7 +37,7 @@
       <p>One thing that's special about us is that we can vary the team size on demand. During the early stages of development, start-ups will often have big fluctuations in workload. We can ramp the team size up or down, depending on development objectives and financing constraints. We can develop at full speed for a week, a month, or a year, then stop on a dime—and stop burning capital—and stop for as long as it takes for the client to close a funding round, or get some traction in the marketplace, or decide on the next round of features. Our clients are done with us when they decide they're done. Their business goals and product needs are always in the driver's seat.</p>
       <p>We strive to be a strategic partner for our clients. We are not an outsourcing firm but instead work to get our clients self-sufficient. We believe our approach offers a unique balance between the short term need for execution and the long term need of sustainability.</p>
     </article>
-    <article>
+    <article id='stylebible'>
       <header>
         <p class='dateline'>March, 2011</p>
         <h1>DRY design documentation</h1>
@@ -48,7 +59,7 @@
       <p>And of course, another agile principle comes into play: Refactoring. Often a second use of a given design treatment exposes new boundary cases and new pressures on the design, and the initial design needs to be modified slightly to accommodate both the new and the old use case. This is usually a simplfying force, and one not to be resisted. Let the documentation live, and reflect the deeper underlying principles of the design you're trying to express. Applied well, this rigor will help you to simplify and clarify your designs, and expose their essence.</p>
       <p>When practiced well, DRY documentation will set you free, give you control and clarity, and communicate your design vision efficiently and clearly. It will also free your development team to do things more or less right the first time, and give them more time to work on the bits that need more love and attention.</p>
     </article>
-    <article>
+    <article id='wellformedstories'>
       <header>
         <p class='dateline'>October, 2012</p>
         <h1>How to write well formed stories</h1>
@@ -75,7 +86,7 @@
       <p>Once apon a time, J (the anchor) made N (a very bright, technical Product Manager) write stories in Gherkin. Most stories weren't 100% ready to be pasted into cucumber, but it usually didn't take too much work to get them there. The team would discuss in IPM, and then devs could copy-and-paste stories right into Cucumber. This doesn't work for every PM, but even in the worst case, teams with less than tech-savvy PMs see real benefits from writing their stories at the right level of granularity. Once I was exposed to a team where we wrote Gherkin all the time, anything else felt like broken process.
       <aside>UPDATE: To be clear, the opinions in this article are my own, and do not reflect anything close to consensus or standard practice on the part of Pivotal. Some Pivots will agree with this position, while many others will not.</aside>
     </article>
-    <article>
+    <article id='velocitymatters'>
       <header>
         <p class='dateline'>August, 2012</p>
         <h1>Velocity matters</h1>
@@ -106,7 +117,7 @@
       <p>The formula above always returns velocity per week. The project velocity Tracker displays is always multiplied by the default iteration length, and rounded down to the nearest integer. For example, if your iterations are 2-weeks long by default, Tracker will multiply the per-week velocity by 2.</p>
       <p>We've got quite lot of detailed information about velocity and related topics in the Tracker FAQ, as well as the Getting Started guide. In particular, take a few minutes to watch the Introduction to the Concepts video.</p>
       </article>
-      <article>
+      <article id='loveci'>
         <header>
           <p class='dateline'>August, 2008</p>
           <h1>How you can stop worrying and love continuous integration</h1>
@@ -124,7 +135,7 @@
         <p>Now, I'm sure that all of the above points can be debated or shown to be inapplicable in a specific situation. Plus, if you are dealing with imperfect CI and development tools (which is always the case), you will have some degree of pain which is directly attributable to CI. It would be great to hear about some of these situations in the comments.</p>
         <p>Bottom Line: Integration is always one of the most painful parts of software development. Doing integration with high quality and low risk is even harder. Most developers who have been on a non-Agile project of any significant size have experienced days-long integration hell and ulcer-inducing all-night production deployments. Continuous Integration doesn't make that pain and stress go away, but it does break it down into small, bite-sized pieces that can be easily handled on a daily basis. All for the low, low cost of being proactive and disciplined, which makes you a better developer anyway.</p>
       </article>
-      <article>
+      <article id='testingstrategies'>
         <header>
           <p class='dateline'>October, 2012</p>
           <h1>Testing strategies</h1>
@@ -165,7 +176,7 @@ Then that code cannot be redeemed in another shopping cart
           <p>Another possibility is wrapping your tests in a transaction that can be rolled back. Many tests I've seen rebuild datasets for each test or group of tests and this can mean a lot of time spent doing setup rather than test execution. If you rollback on each test, nothing will be committed to the database, ensuring the data is consistent without rebuilding each time.</p>
           <p>Tests are a way to increase confidence in an application but that confidence can be shattered if you do not trust your tests, or they take so long to run that you bypass them in various ways. Fundamentally, tests and build scripts should be considered in the same way that production code is. This small change of thought process can lead to better, more reliable and quicker tests.</p>
       </article>
-      <article>
+      <article id='buildingconfidence'>
         <header>
           <p class='dateline'>October, 2012</p>
           <h1>Building confidence</h1>

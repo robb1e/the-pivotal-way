@@ -44,3 +44,26 @@ code {
   padding: 10px;
 }
 
+nav {
+  border-bottom: 3px solid #ccc;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav li {
+  border-bottom: 1px solid #DDD;
+  padding: 12px 0;
+}
+
+nav li span {
+  float: right;
+  font-size: 12px;
+}
+
