@@ -1,0 +1,13 @@
+nav li span {
+  float: none;
+  display: block;
+}
+
+.logo {
+  float: none;
+}
+
+#intro {
+  margin-top: 50px;
+}
+
