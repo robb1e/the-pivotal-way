@@ -16,6 +16,6 @@ hgroup h2, article header p.standfirst {
 }
 
 code {
-  color: #63FF00;
-  background: black;
+  background: #F8F8F8;
+  border: 1px solid #ccc;
 }
