@@ -80,3 +80,8 @@ article:not(#intro) {
   page-break-before: always;
   page-break-inside: avoid;
 }
+
+qoute {
+  font-style: italic;
+}
+
