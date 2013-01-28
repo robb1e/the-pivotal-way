@@ -24,13 +24,17 @@ article {
   margin: 20px 0;
 }
 
-p.byline {
+.byline {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 6px 0;
 }
 
-p.dateline {
+.dateline:before {
+  content: ', '
+}
+
+.dateline {
   font-size: 12px;
 }
 
